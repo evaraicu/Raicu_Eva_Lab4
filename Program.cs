@@ -1,5 +1,8 @@
+using Microsoft.EntityFrameworkCore; 
+using Raicu_Eva_Lab4.Data;
 var builder = WebApplication.CreateBuilder(args);
-
+builder.Services.AddDbContext<Raicu_Eva_Lab4.Data.AppDbContext>(options =>
+    options.UseInMemoryDatabase("PredictionDb"));
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
