@@ -1,0 +1,43 @@
+﻿@model DashboardViewModel  
+@{     
+    ViewData["Title"] = "Dashboard predicții"; 
+    }  
+    <h2>Dashboard predicții</h2>  
+    <div class="row mb-4">     
+        <!-- Card: Total predicții -->     
+        <div class="col-md-4">         
+            <div class="card text-bg-primary mb-3">             
+                <div class="card-body">                 
+                    <h5 class="card-title">Număr total de predicții</h5>                 
+                    <p class="card-text display-6">@Model.TotalPredictions</p>             
+                </div>         
+                </div>     
+                </div>      
+                <!-- Card: Tipuri de plată + medii -->     
+                <div class="col-md-8">         
+                    <div class="card mb-3">             
+                        <div class="card-body">                 
+                            <h5 class="card-title">Preț mediu per tip de plată</h5>                 
+                            <table class="table table-sm mb-0">                     
+                                <thead>                         
+                                    <tr>                            
+                                        <th>Tip plată</th>                             
+                                        <th>Număr predicții</th>                             
+                                        <th>Preț mediu</th>                        
+                                    </tr>                     
+                                    </thead>                     
+                                    <tbody>                     
+                                        @foreach (var item in Model.PaymentTypeStats)                     
+                                        {                         
+                                            <tr>                             
+                                                <td>@item.PaymentType</td>                             
+                                                <td>@item.Count</td>                             
+                                                <td>@item.AveragePrice.ToString("0.00")</td>                         
+                                            </tr>                     
+                                        }                     
+                                        </tbody>                 
+                                        </table> 
+            </div>
+        </div>
+    </div>
+</div>  
