@@ -19,4 +19,4 @@ namespace Price_Prediction.Controllers
             return View(input);
         }
     }
-}
+} 
