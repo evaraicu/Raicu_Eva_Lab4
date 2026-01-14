@@ -19,7 +19,6 @@ namespace Raicu_Eva_Lab4.Controllers
             _context = context;
         }
 
-        // --- ADAUGĂ ACEASTĂ METODĂ PENTRU A REZOLVA EROAREA 405 ---
         [HttpGet]
         public IActionResult Price()
         {
