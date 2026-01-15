@@ -5,6 +5,7 @@ using System;
 using System.Linq;
 using System.IO;
 using System.Collections.Generic;
+using Raicu_Eva_Lab4;
 namespace Raicu_Eva_Lab4
 {
     public partial class PricePredictionModel
